@@ -1,13 +1,13 @@
 <template lang="pug">
-.grid.grid-cols-6.gap-4.p-5.bg-white.shadow.rounded
+.grid.gap-4.p-5.bg-white.shadow.rounded(class="sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6")
   .flex.justify-start.items-center
     img.rounded-full.h-14.w-14(:src="getImage(data.image)" alt="Photo")
     h5.mx-2.font-semibold {{ data.name || 'Name' }}
-  .flex.justify-center.items-center
+  .flex.justify-center.items-center(class="hidden md:block lg:block")
     h5 {{ data.status || 'Status' }}
-  .flex.justify-center.items-center
+  .flex.justify-center.items-center(class="hidden md:block lg:block")
     h5 {{ data.species || 'Species' }}
-  .flex.justify-center.items-center
+  .flex.justify-center.items-center(class="hidden md:block lg:block")
     h5 {{ data.gender || 'Gender' }}
   .flex.justify-center.items-center
     h5 {{ formatDate(data.created) }}

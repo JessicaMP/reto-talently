@@ -1,5 +1,5 @@
 <template lang="pug">
-.items-start.justify-between(class="w-1/12")
+.items-start.justify-between.w-full
     aside.flex.flex-col.items-center.bg-white.text-gray-700
         .mb-20.mt-5.h-16.flex.items-center.w-full.justify-center
             button.cursor-pointer.text-xl.leading-none.px-3.py-1.border.border-solid.border-transparent.rounded.bg-transparent.block.outline-none(class='focus:outline-none' type='button')

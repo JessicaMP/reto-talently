@@ -1,23 +1,10 @@
 <template lang="pug">
-//- .min-h-screen.flex
-.h-screen.w-screen
-    .flex.flex-wrap.items-start.justify-between
+.grid(class="sm:grid-cols-1 md:grid-cols-12 lg:grid-cols-12")
+    div.shadow(class="sm:col-span-1 md:col-span-1 lg:col-span-1 hidden md:block lg:block")
         NavigationBar
-        .bg-blue-50(class="w-11/12")
-            .flex.justify-between
-                .w-full
-                    Header
-                    Body(:data="data")
-//- .container
-//-     .row
-//-         .grid.grid-cols-12.gap-1
-//-             .col-span-1
-//-                 //- NavigationBar
-//-                 h1 1
-//-             .col-span-11.bg-blue-50
-//-                 h1 2
-//-             //- Header
-//-             //- Body
+    div(class="sm:col-span-1 md:col-span-11 lg:col-span-11")
+        Header
+        Body(:data="data")
 </template>
 <script>
 import Header from "./header"
