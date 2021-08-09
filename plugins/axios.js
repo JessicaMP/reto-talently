@@ -4,4 +4,4 @@ export default function ({ $axios, redirect }) {
         redirect('/sorry')
       }
     })
-  }
+}
