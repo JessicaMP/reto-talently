@@ -21,6 +21,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    base: 'reto-talenty'
+  },
   rules: [
     {
       test: /\.pug$/,
