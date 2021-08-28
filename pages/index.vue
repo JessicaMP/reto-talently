@@ -1,5 +1,4 @@
 <template lang="pug">
-  <!-- h1.text-sm {{list}} -->
   Home(:data="content")
 </template>
 

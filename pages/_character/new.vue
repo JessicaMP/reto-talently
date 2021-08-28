@@ -1,7 +1,7 @@
 <template lang="pug">
-.p-12.px-24.bg-blue-50.h-full
+.p-12.bg-blue-50.h-full(class="sm:px-2 md:px-12 lg:px-24")
     .flex.items-end.justify-between
-        h1.text-4xl New Characters
+        h1.text-4xl New Character
     form.px-8.pt-6.pb-8.mb-4.bg-white.rounded.my-5
         .grid(class="sm:grid-cols-12 md:grid-cols-3 lg:grid-cols-3")
             .mb-4(class='md:mr-2 md:mb-0')
@@ -16,8 +16,8 @@
                 label.block.mb-2.text-sm.font-bold.text-gray-700(for='species')
                     | Species
                 input#species.w-full.px-3.py-2.text-sm.leading-tight.text-gray-700.border.rounded.shadow.appearance-none(v-model="species" class='focus:outline-none focus:shadow-outline' type='text' placeholder='Species')
-        .grid(class="sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3")
-            div(class='md:ml-2')
+        .grid.mt-5(class="sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3")
+            div
                 label.block.mb-2.text-sm.font-bold.text-gray-700(for='gender')
                     | Gender
                 input#species.w-full.px-3.py-2.text-sm.leading-tight.text-gray-700.border.rounded.shadow.appearance-none(v-model="gender" class='focus:outline-none focus:shadow-outline' type='text' placeholder='Gender')

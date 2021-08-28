@@ -1,6 +1,9 @@
 <template lang="pug">
 .bg-white.shadow.p-4.w-full
-    img.w-40(src=`~/assets/images/logo.png` alt="Logo" class="hidden lg:block hidden md:block")
+    img.w-40.cursor-pointer(@click="$router.push('/')"
+            src=`~/assets/images/logo.png`
+            alt="Logo" 
+            class="hidden lg:block hidden md:block")
     div(class="sm:hidden")
         .flex.justify-between.items-center
             button.cursor-pointer.text-xl.leading-none.px-3.py-1.border.border-solid.border-transparent.rounded.bg-transparent.block.outline-none(class='focus:outline-none' type='button')
