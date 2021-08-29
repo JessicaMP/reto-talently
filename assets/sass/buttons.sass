@@ -1,0 +1,16 @@
+.button__blue
+    @apply text-gray-300
+    span
+        @apply block relative bg-gray-300
+    &:hover
+        @apply bg-blue-100 text-blue-600 border-l-4 border-blue-600
+        span
+            @apply bg-blue-600
+.button--rounded
+    @apply rounded-full h-12 w-12
+    span
+        @apply transform translate-x-1/2
+    span:last-of-type
+        @apply transform translate-x-3/4
+    &:hover
+        @apply border-none

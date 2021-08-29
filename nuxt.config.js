@@ -50,7 +50,8 @@ export default {
     },
   ],
   css: [
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '@/assets/sass/main.sass'
   ],
   plugins: [
     '~/plugins/axios.js',

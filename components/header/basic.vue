@@ -1,10 +1,7 @@
 <template lang="pug">
 .bg-white.shadow.p-4.w-full
     .flex.justify-between.items-center
-        button.cursor-pointer.text-xl.leading-none.px-3.py-1.border.border-solid.border-transparent.rounded.bg-transparent.block.outline-none(class='focus:outline-none' type='button')
-            span.block.relative.w-6.rounded-sm.bg-gray-300(class="h-0.5")
-            span.block.relative.w-6.rounded-sm.bg-gray-300.mt-1(class="h-0.5")
-            span.block.relative.w-4.rounded-sm.bg-gray-300.mt-1(class="h-0.5")
+        BtnBlue
         .flex.items-center.justify-center
             img.w-40.cursor-pointer(src=`~/assets/images/logo.png` alt="Logo" @click="$router.push('/')")
         .flex.items-center.justify-center
@@ -14,9 +11,13 @@
 </template>
 <script>
 import { IMAGE_USER } from "~/enums"
+import BtnBlue from "../buttons/btnBlue"
 
 export default {
     name: "HeaderBasic",
+    components: {
+        BtnBlue
+    },
     data: () => ({
         imageUrl: IMAGE_USER
     })
