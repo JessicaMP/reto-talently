@@ -1,8 +1,9 @@
 <template lang="pug">
-.grid.gap-4.p-5.bg-white.shadow.rounded(class="sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6")
-  .flex.justify-start.items-center
+.grid.gap-2.bg-white.shadow.rounded(class="grid-cols-3 md:grid-cols-7 lg:grid-cols-7 py-4 px-2 md:p-5 lg:p-5")
+  .flex.justify-start.items-center(class="flex-col md:flex-row lg:flex-row col-span-1 md:col-span-2 lg:col-span-2")
     img.rounded-full.h-14.w-14(:src="getImage(data.image)" alt="Photo")
-    h5.mx-2.font-semibold {{ data.name || 'Name' }}
+    h5.mx-2.font-semibold(class="text-center md:text-left lg:text-left") {{ data.name || 'Name' }}
+      | #[br] #[p.text-gray-300 # {{data.id}}]
   .justify-start.items-center(class="hidden md:flex lg:flex")
     h5 {{ data.status || 'Status' }}
   .justify-start.items-center(class="hidden md:flex lg:flex")

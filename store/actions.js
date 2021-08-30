@@ -15,5 +15,11 @@ export default {
         dataContent.unshift(data)
         copyContent.results = dataContent
         commit("setValue", {property: "content", value: copyContent})
+    },
+    changeOrderItems({commit, state}, order){
+        const copyContent = Object.assign({}, state.content)
+        const newOrder = [...copyContent.results].sort(order)
+        copyContent.results = newOrder
+        commit("setValue", {property: "content", value: copyContent})
     }
 }
