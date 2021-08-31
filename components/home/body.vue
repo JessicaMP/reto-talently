@@ -7,7 +7,7 @@
         @click="addCharacter")
             font-awesome-icon.mx-5(icon="plus")
             div.bg-blue-500.p-2.px-4 New
-    .inset-y-4(class="fixed md:hidden lg:hidden")
+    .bottom-4.right-4(class="fixed md:hidden lg:hidden")
         button.p-3.text-center.text-white.transition.bg-blue-600.rounded-full.h-20.w-20.shadow-2xl.ripple(
             class='hover:shadow-lg hover:bg-blue-800 focus:outline-none'
             @click="addCharacter")

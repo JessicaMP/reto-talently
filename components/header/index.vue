@@ -14,7 +14,7 @@
                 button.button__blue.button--rounded
                     .relative.inline-block
                         font-awesome-icon.text-1xl.w-6.h-6.fill-current(icon="bell")
-                        h7(class="absolute top__7 right__2 inline-block w-1 h-1 transform bg-blue-600 rounded-full bg-blue-600")
+                        h5(class="absolute top__7 right__2 inline-block w-1 h-1 transform bg-blue-600 rounded-full bg-blue-600")
 </template>
 <script>
 import BtnBlue from "../buttons/btnBlue"
