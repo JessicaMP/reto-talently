@@ -49,6 +49,7 @@ export default {
       ],
     },
   ],
+  
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@/assets/sass/main.sass'
@@ -60,11 +61,24 @@ export default {
   components: true,
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/dotenv'
   ],
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
   build: {
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
+  proxy: {
+    '/api': {
+      target: process.env.API_URL,
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
   }
 }

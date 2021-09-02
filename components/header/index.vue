@@ -6,7 +6,7 @@
             class="hidden lg:block md:block")
     div(class="block md:hidden lg:hidden")
         .flex.justify-between.items-center
-            BtnBlue
+            BtnBlue(@btnEvent="btnEvent")
             h1(class="text-2xl md:text-4xl") Characters
             .flex.justify-center.items-center
                 button.button__blue.button--rounded.mx-5
@@ -24,5 +24,10 @@ export default {
     components: {
         BtnBlue
     },
+    methods: {
+        btnEvent(value) {
+            this.$store.dispatch("changeValue", value)
+        }
+    }
 }
 </script>

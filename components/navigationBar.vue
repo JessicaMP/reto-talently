@@ -2,7 +2,7 @@
 .items-start.justify-between.w-full
     aside.flex.flex-col.items-center.bg-white.text-gray-700
         .mb-20.mt-5.h-16.flex.items-center.w-full.justify-center
-            BtnBlue
+            BtnBlue(@btnEvent="btnEvent")
         ul.w-full
             li.button__blue
                 a.h-16.px-6.flex.flex.justify-center.items-center(class='focus:text-orange-500')
@@ -31,11 +31,21 @@
 </template>
 <script>
 import BtnBlue from "./buttons/btnBlue"
+import { mapState } from "vuex"
 
 export default {
     name: "NavigationBar",
     components: {
         BtnBlue
     },
+    computed: {
+        ...mapState(["sidebarOpen"])
+    },
+    methods: {
+        btnEvent(value) {
+            console.log({value})
+            // this.$store.dispatch("changeValue", value)
+        }
+    }
 }
 </script>

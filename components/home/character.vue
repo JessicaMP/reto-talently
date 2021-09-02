@@ -14,8 +14,7 @@
     h5 {{ formatDate(data.created) }}
   .flex.justify-center.items-center
     button.text-blue-600.p-3.font-semibold.rounded-md(class="hover:bg-blue-600 hover:text-white"
-    @click="$router.replace(`character?url=${data.url}`)") Manage
-    //- a.text-blue-600.font-semibold(:href="data.url") Manage
+    @click="$router.replace(`character?id=${data.id}`)") Manage
 </template>
 <script>
 import { IMAGE_DEFAULT } from "~/enums"

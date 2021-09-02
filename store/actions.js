@@ -3,7 +3,7 @@ export default {
         await dispatch("getCharacters")
     },
     async getCharacters({ commit }) {
-        const data = await this.$axios.$get(`https://rickandmortyapi.com/api/character`)
+        const data = await this.$axios.$get(`/character`)
         commit("setValue", {property: "content", value: data})
     },
     async saveNewCharacter({commit, state, dispatch}, data){
@@ -21,5 +21,8 @@ export default {
         const newOrder = [...copyContent.results].sort(order)
         copyContent.results = newOrder
         commit("setValue", {property: "content", value: copyContent})
+    },
+    changeValue({commit}, value) {
+        commit("setValue", {property: "sidebarOpen", value})
     }
 }
