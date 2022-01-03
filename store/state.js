@@ -1,4 +1,5 @@
 export default () => ({
     content: {},
-    sidebarOpen: true
+    sidebarOpen: true,
+    loading: true
 })

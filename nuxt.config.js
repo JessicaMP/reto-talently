@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   target: 'static',
   head: {
     title: 'frontend-challenge',
@@ -56,7 +55,8 @@ export default {
   ],
   plugins: [
     '~/plugins/axios.js',
-    '~/plugins/fontawesome.js'
+    '~/plugins/fontawesome.js',
+    '~/plugins/vue-luxon.js',
   ],
   components: true,
   buildModules: [

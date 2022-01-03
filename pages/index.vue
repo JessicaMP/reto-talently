@@ -1,5 +1,7 @@
 <template lang="pug">
-  Home(:data="content")
+div
+  p(v-if="loading") Cargando...
+  Home(v-else :data="content")
 </template>
 
 <script>
@@ -12,11 +14,12 @@ export default {
   },
   computed: {
     ...mapState([
-      "content"
+      "content",
+      "loading"
     ])
   },
-  async asyncData ({ store }) {
-    await store.dispatch("getCharacters")
-  }
+  // async asyncData ({ store }) {
+  //   await store.dispatch("getCharacters")
+  // }
 }
 </script>

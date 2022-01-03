@@ -1,15 +1,23 @@
 export default {
-    async nuxtServerInit ({ dispatch }, { req }) {
+    async nuxtServerInit ({ dispatch }) {
+        console.log("nuxtServerInit")
         await dispatch("getCharacters")
     },
+    // async nuxtServerInit(vuexContext) {
+    //     return await vuexContext.dispatch('getCharacters')
+    // },
     async getCharacters({ commit }) {
+        console.log("getCharacters")
         const data = await this.$axios.$get(`/character`)
         commit("setValue", {property: "content", value: data})
+        if(data) {
+            commit("setValue", {property: "loading", value: false})
+        }
     },
     async saveNewCharacter({commit, state, dispatch}, data){
         await dispatch("getCharacters")
         const copyContent = Object.assign({}, state.content)
-        const calculateId = copyContent.results.length
+        const calculateId = copyContent.results.length +1
         data.id = calculateId
         const dataContent = [...copyContent.results]
         dataContent.unshift(data)
